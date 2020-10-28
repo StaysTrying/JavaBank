@@ -13,7 +13,7 @@ public class JavaBank extends JFrame {
   private static final long serialVersionUID = 1L;
   // Make these variables publicly available
   public String Name;
-  public int Accountnum;
+  public int AccountNum;
   public int Balance;
 
 
@@ -25,8 +25,8 @@ public class JavaBank extends JFrame {
   private JTextField NameJTextField;
 
   // JLabel and JTextField for account number
-  private JLabel AccountnumJLabel;
-  private JTextField AccountnumJTextField;
+  private JLabel AccountNumJLabel;
+  private JTextField AccountNumJTextField;
 
   // JLabel and JTextField for balance
   private JLabel BalanceJLabel;
@@ -74,14 +74,28 @@ public class JavaBank extends JFrame {
   // constructor
 
   public JavaBank() {
-    for (int i = 0; i < 10; i++) {
-      AccountNames[i] = "EMPTY";
-      //System.out.println(AccountNames[i]);
+    for (int i=0; i<noAccounts; i++) {
+      displayJTextArea.setText(
+              "Bank Name : " + myAccounts[i].getBankName()
+                      + "\nAccount Holder : " + myAccounts[i].getAccountName()
+                      + "\nAccount Number : " + myAccounts[i].getAccountNum()
+                      + "\nAccount balance: " + myAccounts[i].getBalance());
 
+      displayAccountDetails(myAccounts[i].getBankName(),
+              myAccounts[i].getAccountName(),
+              myAccounts[i].getAccountNum(),
+              myAccounts[i].getBalance());
     }
     createUserInterface();
   }
 
+  private void displayAccountDetails(String bName, String aName,
+                                     int aNum, int aBal){
+    displayJTextArea.setText( "Bank Name : " + bName
+            + "\nAccount Holder : " + aName
+            + "\nAccount Number : " + aNum
+            + "\nAccount balance: " + aBal);
+  }//end method displayAccountDetails
 
   // create and position GUI components; register event handlers
   private void createUserInterface() {
@@ -111,16 +125,16 @@ public class JavaBank extends JFrame {
     inputDetailJPanel.add(NameJTextField);
 
     // set up AccountnumJLabel
-    AccountnumJLabel = new JLabel();
-    AccountnumJLabel.setBounds(8, 56, 100, 23);
-    AccountnumJLabel.setText("Account Number:");
-    inputDetailJPanel.add(AccountnumJLabel);
+    AccountNumJLabel = new JLabel();
+    AccountNumJLabel.setBounds(8, 56, 100, 23);
+    AccountNumJLabel.setText("Account Number:");
+    inputDetailJPanel.add(AccountNumJLabel);
 
     // set up AccountnumTextField
-    AccountnumJTextField = new JTextField();
-    AccountnumJTextField.setBounds(112, 56, 80, 21);
-    AccountnumJTextField.setHorizontalAlignment(JTextField.RIGHT);
-    inputDetailJPanel.add(AccountnumJTextField);
+    AccountNumJTextField = new JTextField();
+    AccountNumJTextField.setBounds(112, 56, 80, 21);
+    AccountNumJTextField.setHorizontalAlignment(JTextField.RIGHT);
+    inputDetailJPanel.add(AccountNumJTextField);
 
     // set up BalanceJLabel
     BalanceJLabel = new JLabel();
@@ -250,7 +264,7 @@ public class JavaBank extends JFrame {
 
     // clear other JTextFields for new data
     NameJTextField.setText(" ");
-    AccountnumJTextField.setText("0");
+    AccountNumJTextField.setText("0");
     BalanceJTextField.setText("0");
     DepositJTextField.setText("0");
     WithdrawJTextField.setText("0");
@@ -274,10 +288,10 @@ public class JavaBank extends JFrame {
     Name = NameJTextField.getText();
 
     //Get Accountnum from Text Field and convert to int unless blank then set to 0
-    if (AccountnumJTextField.getText() == "0") {
-      Accountnum = 0;
+    if (AccountNumJTextField.getText() == "0") {
+      AccountNum = 0;
     } else {
-      Accountnum = Integer.parseInt(AccountnumJTextField.getText());
+      AccountNum = Integer.parseInt(AccountNumJTextField.getText());
     }
 
     //Get Balance from Text Field and convert to int unless blank then set to 0
@@ -289,15 +303,15 @@ public class JavaBank extends JFrame {
 
     //int emptyAccount = 11;
 
-    if ((noAccounts <= 9) & (Name != "") & (Accountnum != 0)) {
-      myAccounts[noAccounts] = new Account(Name, Accountnum, Balance);
+    if ((noAccounts <= 9) & (Name != "") & (AccountNum != 0)) {
+      myAccounts[noAccounts] = new Account(Name, AccountNum, Balance);
       AccountNames[noAccounts] = "USED";
       //System.out.println(myAccounts[noAccounts].getaccountname());
       //emptyAccount = i;
 
       displayJTextArea.setText(
-          myAccounts[noAccounts].getaccountname() + " " + myAccounts[noAccounts].getaccountnum()
-              + " " + myAccounts[noAccounts].getbalance());
+          myAccounts[noAccounts].getAccountName() + " " + myAccounts[noAccounts].getAccountNum()
+              + " " + myAccounts[noAccounts].getBalance());
       noAccounts++;
       System.out.println(noAccounts);
     } else {
@@ -311,7 +325,7 @@ public class JavaBank extends JFrame {
 
     // clear other JTextFields for new data
     NameJTextField.setText(" ");
-    AccountnumJTextField.setText("0");
+    AccountNumJTextField.setText("0");
     BalanceJTextField.setText("0");
     DepositJTextField.setText("0");
     WithdrawJTextField.setText("0");
@@ -329,7 +343,7 @@ public class JavaBank extends JFrame {
     // clear JTextFields for new data
 
     NameJTextField.setText(" ");
-    AccountnumJTextField.setText("0");
+    AccountNumJTextField.setText("0");
     BalanceJTextField.setText("0");
     DepositJTextField.setText("0");
     WithdrawJTextField.setText("0");
@@ -346,23 +360,23 @@ public class JavaBank extends JFrame {
     } else {
 
       // get user input
-      int Accountnum = Integer.parseInt(AccountnumJTextField.getText());
+      int Accountnum = Integer.parseInt(AccountNumJTextField.getText());
       int Deposit = Integer.parseInt(DepositJTextField.getText());
       int Withdraw = Integer.parseInt(WithdrawJTextField.getText());
 
       for (int i = 0; i < noAccounts; i++) {
-        if ((myAccounts[i].getaccountnum() == Accountnum) && (Deposit > 0)) {
-          myAccounts[i].setBalance(myAccounts[i].getbalance() + Deposit);
+        if ((myAccounts[i].getAccountNum() == Accountnum) && (Deposit > 0)) {
+          myAccounts[i].setBalance(myAccounts[i].getBalance() + Deposit);
           displayJTextArea.setText(
-              myAccounts[i].getaccountname() + " " + myAccounts[i].getaccountnum() + " "
-                  + myAccounts[i].getbalance());
+              myAccounts[i].getAccountName() + " " + myAccounts[i].getAccountNum() + " "
+                  + myAccounts[i].getBalance());
         }
 
-        if ((myAccounts[i].getaccountnum() == Accountnum) && (Withdraw > 0)) {
-          myAccounts[i].setBalance(myAccounts[i].getbalance() - Withdraw);
+        if ((myAccounts[i].getAccountNum() == Accountnum) && (Withdraw > 0)) {
+          myAccounts[i].setBalance(myAccounts[i].getBalance() - Withdraw);
           displayJTextArea.setText(
-              myAccounts[i].getaccountname() + " " + myAccounts[i].getaccountnum() + " "
-                  + myAccounts[i].getbalance());
+              myAccounts[i].getAccountName() + " " + myAccounts[i].getAccountNum() + " "
+                  + myAccounts[i].getBalance());
         }
 
       }
@@ -370,7 +384,7 @@ public class JavaBank extends JFrame {
 
     // clear other JTextFields for new data
     NameJTextField.setText(" ");
-    AccountnumJTextField.setText("0");
+    AccountNumJTextField.setText("0");
     BalanceJTextField.setText("0");
     DepositJTextField.setText("0");
     WithdrawJTextField.setText("0");
@@ -389,15 +403,15 @@ public class JavaBank extends JFrame {
       for (int i = 0; i < noAccounts; i++) {
 
         displayJTextArea.append(
-            myAccounts[i].getaccountname() + " " + myAccounts[i].getaccountnum() + " "
-                + myAccounts[i].getbalance() + "\n");
+            myAccounts[i].getAccountName() + " " + myAccounts[i].getAccountNum() + " "
+                + myAccounts[i].getBalance() + "\n");
 
 
       }
     }
     // clear other JTextFields for new data
     NameJTextField.setText(" ");
-    AccountnumJTextField.setText("0");
+    AccountNumJTextField.setText("0");
     BalanceJTextField.setText("0");
     DepositJTextField.setText("0");
     WithdrawJTextField.setText("0");

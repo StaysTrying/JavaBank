@@ -284,7 +284,7 @@ public class JavaBankList extends JFrame {
       Account tempAccount = (Account) Accounts.get(Accounts.size() - 1);
       //Display tempAccount
       displayJTextArea.setText(
-          Accounts.size() + " " + tempAccount.getaccountname() + " " + tempAccount.getaccountnum()
+          Accounts.size() + " " + tempAccount.getAccountName() + " " + tempAccount.getAccountNum()
               + " " + tempAccount.getbalance());
 
     } else {
@@ -340,7 +340,7 @@ public class JavaBankList extends JFrame {
           tempAccount.setBalance(tempAccount.getbalance() + Deposit);
           Accounts.set(i, tempAccount);
           displayJTextArea.setText(
-              tempAccount.getaccountname() + " " + tempAccount.getaccountnum() + " " + tempAccount
+              tempAccount.getAccountName() + " " + tempAccount.getAccountNum() + " " + tempAccount
                   .getbalance());
 
         }
@@ -349,7 +349,7 @@ public class JavaBankList extends JFrame {
           tempAccount.setBalance(tempAccount.getbalance() - Withdraw);
           Accounts.set(i, tempAccount);
           displayJTextArea.setText(
-              tempAccount.getaccountname() + " " + tempAccount.getaccountnum() + " " + tempAccount
+              tempAccount.getAccountName() + " " + tempAccount.getAccountNum() + " " + tempAccount
                   .getbalance());
 
         }
@@ -377,7 +377,7 @@ public class JavaBankList extends JFrame {
       for (int i = 0; i < Accounts.size(); i++) {
         Account tempAccount = (Account) Accounts.get(i);
         displayJTextArea.append(
-            tempAccount.getaccountname() + " " + tempAccount.getaccountnum() + " " + tempAccount
+            tempAccount.getAccountName() + " " + tempAccount.getAccountNum() + " " + tempAccount
                 .getbalance() + "\n");
 
 
