@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6288b54d-7cc3-40e2-abe2-1185f9ca94c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/InterfaceBankAccount.java" afterDir="false" />
+    <list default="true" id="6288b54d-7cc3-40e2-abe2-1185f9ca94c7" name="Default Changelist" comment="Added Interface">
+      <change afterPath="$PROJECT_DIR$/src/AbstractBankAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestCustomerAccounts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreditAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InterfaceBankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InterfaceBankAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JavaBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaBank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JavaBankArrayListDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaBankArrayListDelete.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JavaBankList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaBankList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testBank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testCreditAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testCreditAccount.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,13 +23,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="2-2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,8 +46,28 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TestCustomerAccounts">
+    <configuration name="TestCustomerAccounts" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="testBank" />
+      <module name="JavaBank" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testCreditAccount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testCreditAccount" />
+      <module name="JavaBank" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -55,6 +81,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.TestCustomerAccounts" />
+      <item itemvalue="Application.testCreditAccount" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.testCreditAccount" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -65,14 +100,30 @@
       <option name="presentableId" value="Default" />
       <updated>1603923601823</updated>
       <workItem from="1603923602934" duration="185000" />
-      <workItem from="1603923854017" duration="1002000" />
+      <workItem from="1603923854017" duration="7860000" />
     </task>
+    <task id="LOCAL-00001" summary="Added Interface">
+      <created>1603924907917</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603924907917</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Interface" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="216" y="107" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603926867874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="216" y="107" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1603926867874" />
     <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1603924147404">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -89,10 +140,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="443" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603923998782" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603924009330">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1603932783084">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603924009330" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1603932783084" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603926845781" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1603932783084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1603932783084" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603926845780" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1603932783084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1603932783084" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603926845779" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1603932783084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/-1920.1.1920.1040@0.0.1536.824" timestamp="1603932783084" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603926845780" />
+    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1603924939865">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1603924939865" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603924964201">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603924964201" />
     <state x="469" y="160" key="refactoring.ChangeSignatureDialog" timestamp="1603924538145">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
